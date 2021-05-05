@@ -24,6 +24,9 @@ function Index({ random }) {
   );
 }
 
+// This function gets called at build time on server-side.
+// It may be called again, on a serverless function, if
+// revalidation is enabled and a new request comes in
 export async function getStaticProps() {
   const res = await fetch("https://api.publicapis.org/random");
   const random = await res.json();
