@@ -14,22 +14,6 @@ Joe Kanakaraj
 
 Next.js is an open-source React front-end development web framework created by Vercel. 
 
-It's two biggest features are:
-- Server-side Rendering (SSR)
-- Static Site Generation (SSG)
-
----
-# Server Side Rendering (SSR)
-- Traditional React apps are loaded and rendered entirely on the client
-- Next allows the first page load to be rendered by the server 
-  - Great for SEO and performance
----
-# Static Site Generation (SSG)
-** Need mroe
-
-- Fetches data at build time
-- Can specify dynamic routes to pre-render pages based on data. 
-
 ---
 
 
@@ -54,6 +38,27 @@ It's two biggest features are:
 
 # The Basics
 
+- Pages and Routing
+- Built in CSS Support
+- Image Optimization
+- 
+
+
+---
+It's two biggest features are:
+- Server-side Rendering (SSR)
+- Static Site Generation (SSG)
+___
+# Server Side Rendering (SSR)
+- Traditional React apps are loaded and rendered entirely on the client
+- Next allows the first page load to be rendered by the server 
+  - Great for SEO and performance
+---
+# Static Site Generation (SSG)
+** Need mroe
+
+- Fetches data at build time
+- Can specify dynamic routes to pre-render pages based on data. 
 
 
 

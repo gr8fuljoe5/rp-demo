@@ -36,4 +36,11 @@ export async function getStaticProps({ params }) {
   return { props: { user } };
 }
 
+// export async function getServerSideProps({ params }) {
+//   const res = await fetch(`http://localhost:3000/api/users/${params.id}`);
+//   const user = await res.json();
+//   return {
+//     props: { user }, // will be passed to the page component as props
+//   };
+// }
 export default UserPage;

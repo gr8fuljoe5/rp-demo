@@ -11,7 +11,8 @@
     "next": "10.2.0",
     "prettier": "^2.2.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.32.12"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^1.0.1"

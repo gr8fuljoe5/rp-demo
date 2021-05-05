@@ -1,0 +1,15 @@
+.basicsContainer a {
+    padding: 10px;
+    text-decoration: underline;
+    color: #009dd5;
+}
+
+.imgOptContainer {
+    display: flex;
+}
+
+.imgOptContainer div {
+    flex-direction: row;
+    width: 50%;
+    margin: 5px;
+}

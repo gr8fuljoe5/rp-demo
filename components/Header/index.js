@@ -13,6 +13,11 @@ function Header() {
       <nav className={styles.nav}>
         <ul>
           <li>
+            <Link href={"/basics"}>
+              <a>Basics</a>
+            </Link>
+          </li>
+          <li>
             <Link href={"/users"}>
               <a>User List</a>
             </Link>
