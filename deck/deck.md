@@ -41,31 +41,29 @@ Next.js is an open-source React front-end development web framework created by V
 - Pages and Routing
 - Built in CSS Support
 - Image Optimization
-- 
 
 
 ---
+# Data Fetching
 It's two biggest features are:
-- Server-side Rendering (SSR)
 - Static Site Generation (SSG)
+- Server-side Rendering (SSR)
+
+---
+# Static Site Generation (SSG)
+
+- Fetches data at build time
+- Can specify dynamic routes to pre-render pages based on data. 
+- Newspaper stand
+
+```
+getStaticProps() - use when your page content depends on extendal data
+getStaticPaths() - used when your paths depend on external data (usually used in addition to getStaticProps) 
+```
+
 ___
 # Server Side Rendering (SSR)
 - Traditional React apps are loaded and rendered entirely on the client
 - Next allows the first page load to be rendered by the server 
   - Great for SEO and performance
----
-# Static Site Generation (SSG)
-** Need mroe
-
-- Fetches data at build time
-- Can specify dynamic routes to pre-render pages based on data. 
-
-
-
----
-
-# <!--fit--> :+1:
-
----
-
-# :+1:
+  

@@ -2,16 +2,13 @@ import Header from "../../components/Header";
 import CssSupport from "../../components/CssSupport";
 import Head from "next/head";
 import Link from "next/link";
-import styles from "./Basics.module.css";
+import styles from "../../styles/Basics.module.css";
 import Image from "next/image";
 
 function Basics() {
   return (
     <div>
-      <Head>
-        <title>The Basics</title>
-      </Head>
-      <Header />
+      <Header title={"The Basics"} />
       <h1>Basics</h1>
 
       <h2>Pages and Basic Routing</h2>
@@ -30,7 +27,11 @@ function Basics() {
       </section>
 
       <h2>Image Optimization</h2>
-      <section>{/*// Code goes here*/}</section>
+      <section>
+        <div>
+          <img src={"/high-res.jpg"} layout={"fill"} alt={"hello world"} />
+        </div>
+      </section>
     </div>
   );
 }
