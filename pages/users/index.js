@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import User from "../../components/user";
+import User from "../../components/User";
+import Header from "../../components/Header";
 
 function Users(props) {
   return (
@@ -9,7 +10,7 @@ function Users(props) {
         <title>Users</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Header />
       <h1>Users</h1>
       {props &&
         props.users &&

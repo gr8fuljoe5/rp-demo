@@ -1,4 +1,4 @@
-import User from "../../components/user";
+import User from "../../components/User";
 
 function UserPage({ user }) {
   return (

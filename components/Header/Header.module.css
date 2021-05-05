@@ -1,0 +1,15 @@
+.container {
+    text-align: left;
+    width: 100%;
+    display: flex;
+}
+
+.nav {
+    display: flex;
+ }
+
+.nav li {
+    display: inline-flex;
+    list-style: none;
+    padding: 10px;
+}
