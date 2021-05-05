@@ -28,6 +28,11 @@ function Header(props) {
               </Link>
             </li>
             <li>
+              <Link href={"/icr"}>
+                <a>ICR</a>
+              </Link>
+            </li>
+            <li>
               <Link href={"/dynamic-imports"}>
                 <a> Dynamic Imports</a>
               </Link>

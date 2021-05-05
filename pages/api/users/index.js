@@ -1,4 +1,4 @@
-import data from "../../../json/users_2.json";
+import data from "../../../json/users_static.json";
 
 export default (req, res) => {
   res.statusCode = 200;
