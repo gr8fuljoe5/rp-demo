@@ -7,7 +7,7 @@ function Index({ data }) {
   return (
     <div>
       <Header title={"SSG"} />
-      <h1>SSG</h1>
+      <h1>Data Fetching</h1>
       <section>
         {data.map((user) => (
           <Link href={`/data-fetching/${user.id}`}>
@@ -21,6 +21,7 @@ function Index({ data }) {
   );
 }
 
+// Next will fetch this data at BUILD time
 export async function getStaticProps() {
   const res = await fetch(USERS);
   const data = await res.json();
