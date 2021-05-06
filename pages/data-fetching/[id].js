@@ -38,4 +38,15 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
+// This also gets called at runtime time
+// export async function getServerSideProps({ params }) {
+//   // params contains the post `id`.
+//   // If the route is like /users/1, then params.id is 1
+//   const res = await fetch(`${USERS}/${params.id}`);
+//   const user = await res.json();
+//
+//   // Pass post data to the page via props
+//   return { props: { user } };
+// }
+
 export default UserById;

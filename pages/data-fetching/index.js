@@ -5,19 +5,19 @@ import Link from "next/link";
 
 function Index({ data }) {
   return (
-    <div>
+    <section>
       <Header title={"SSG"} />
       <h1>Data Fetching</h1>
       <section>
-        {data.map((user) => (
-          <Link href={`/data-fetching/${user.id}`}>
+        {data.map((user, idx) => (
+          <Link href={`/data-fetching/${user.id}`} key={`user_${idx}`}>
             <a>
               <UserList user={user} showAlbum={false} />
             </a>
           </Link>
         ))}
       </section>
-    </div>
+    </section>
   );
 }
 
