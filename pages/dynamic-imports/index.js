@@ -2,33 +2,33 @@ import { useState } from "react";
 import Header from "../../components/Header";
 import dynamic from "next/dynamic";
 
-// import DynamicComponent1 from "../../components/Dynamic/hello1";
-// import DynamicComponent2WithCustomLoading from "../../components/Dynamic/hello2";
-// import DynamicComponent3WithNoSSR from "../../components/Dynamic/hello3";
-// import DynamicComponent4 from "../../components/Dynamic/hello4";
-// import DynamicComponent5 from "../../components/Dynamic/hello5";
+import DynamicComponent1 from "../../components/Dynamic/hello1";
+import DynamicComponent2WithCustomLoading from "../../components/Dynamic/hello2";
+import DynamicComponent3WithNoSSR from "../../components/Dynamic/hello3";
+import DynamicComponent4 from "../../components/Dynamic/hello4";
+import DynamicComponent5 from "../../components/Dynamic/hello5";
 
-const DynamicComponent1 = dynamic(() =>
-  import("../../components/Dynamic/hello1")
-);
-
-const DynamicComponent2WithCustomLoading = dynamic(
-  () => import("../../components/Dynamic/hello2"),
-  { loading: () => <p>Loading caused by client page transition ...</p> }
-);
-
-const DynamicComponent3WithNoSSR = dynamic(
-  () => import("../../components/Dynamic/hello3"),
-  { loading: () => <p>Loading ...</p>, ssr: false }
-);
-
-const DynamicComponent4 = dynamic(() =>
-  import("../../components/Dynamic/hello4")
-);
-
-const DynamicComponent5 = dynamic(() =>
-  import("../../components/Dynamic/hello5")
-);
+// const DynamicComponent1 = dynamic(() =>
+//   import("../../components/Dynamic/hello1")
+// );
+//
+// const DynamicComponent2WithCustomLoading = dynamic(
+//   () => import("../../components/Dynamic/hello2"),
+//   { loading: () => <p>Loading caused by client page transition ...</p> }
+// );
+//
+// const DynamicComponent3WithNoSSR = dynamic(
+//   () => import("../../components/Dynamic/hello3"),
+//   { loading: () => <p>Loading ...</p>, ssr: false }
+// );
+//
+// const DynamicComponent4 = dynamic(() =>
+//   import("../../components/Dynamic/hello4")
+// );
+//
+// const DynamicComponent5 = dynamic(() =>
+//   import("../../components/Dynamic/hello5")
+// );
 
 const IndexPage = () => {
   const [showMore, setShowMore] = useState(false);

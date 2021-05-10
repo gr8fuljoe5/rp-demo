@@ -7,8 +7,8 @@ function Name() {
   const { name } = router.query;
   return (
     <>
-      <Header title={`Hello, ${name}`} />
-      <div>Hello, {name}</div>
+      <Header title={`Welcome to Next.js, ${name}`} />
+      <div>Hello, {name}!</div>
     </>
   );
 }

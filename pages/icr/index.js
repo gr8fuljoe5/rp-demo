@@ -4,18 +4,28 @@ import Header from "../../components/Header";
 
 function Index({ random }) {
   const { entries } = random;
+
   console.log("data entries => ", entries);
+
   return (
     <div>
       <Header title={"ICR"} />
       <h1>Incremental Static Regeneration</h1>
       <ul>
         {entries.map((entry, idx) => {
+          const { API, Link, Description, Category } = entry;
           return (
             <>
-              <li key={`api_${idx}`}>API: {entry.API}</li>
-              <li key={`desc_${idx}`}>Description: {entry.Description}</li>
-              <li key={`cat_${idx}`}>Category: {entry.Category}</li>
+              <li key={`api_${idx}`}>
+                <a
+                  href={Link}
+                  style={{ color: "blue", textDecoration: "underline" }}
+                >
+                  API: {API}
+                </a>
+              </li>
+              <li key={`desc_${idx}`}>Description: {Description}</li>
+              <li key={`cat_${idx}`}>Category: {Category}</li>
             </>
           );
         })}
@@ -38,7 +48,7 @@ export async function getStaticProps() {
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every X seconds
-    revalidate: 5, // In seconds
+    revalidate: 10, // In seconds
   };
 }
 
