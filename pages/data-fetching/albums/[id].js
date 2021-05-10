@@ -1,9 +1,12 @@
+import { useRouter } from "next/router";
 import { ALBUMS } from "../../../contants/endpoints";
 
 function AlbumId(props) {
+  const router = useRouter();
+  const { id } = router.query;
   return (
     <div>
-      <h1>Album</h1>
+      <h1>Album for user {id}</h1>
       <section>
         <ul>
           {props.albums.map((album, idx) => {
