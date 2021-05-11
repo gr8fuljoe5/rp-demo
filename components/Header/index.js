@@ -23,8 +23,8 @@ function Header(props) {
               </Link>
             </li>
             <li>
-              <Link href={"/data-fetching"}>
-                <a>Data Fetching</a>
+              <Link href={"/data-fetching/blog"}>
+                <a>Data Fetching Blog Demo</a>
               </Link>
             </li>
             <li>

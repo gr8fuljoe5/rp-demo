@@ -9,6 +9,7 @@
     "prod": "npm run build  && npm run start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "next": "10.2.0",
     "prettier": "^2.2.1",
     "react": "17.0.2",
