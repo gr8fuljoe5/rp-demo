@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
- .main .container {
-     border: 4px dotted orange;
-     margin: 5px;
-     padding: 5px;
+ .container {
+     border: 1px dotted orange;
      text-align: center;
      font-size: 2rem;
-     background-color: pink;
      text-shadow: 2px 2px #0e2231;
      color: green;
      font-family: 'Open Sans', sans-serif;

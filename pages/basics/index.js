@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    width: "95%",
+    padding: theme.spacing(2),
   },
   paper: {
     padding: theme.spacing(2),
@@ -54,9 +54,9 @@ function Basics() {
             <Paper elevation={2}>
               <section>
                 <div>
-                  <img
+                  <Image
                     src={"/high-res.jpg"}
-                    width={500}
+                    width={1200}
                     height={500}
                     alt={"hello world"}
                   />
