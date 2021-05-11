@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 $base-color: #c6538c;
 $border-dark: rgba($base-color, 0.88);
-
 .container {
-  border: 1px solid $border-dark;
+  border: 3px dashed $border-dark;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  margin: 5px;
+  background-color: orange;
+  text-shadow: 2px 2px #0e2231;
+  color: #fff;
 }

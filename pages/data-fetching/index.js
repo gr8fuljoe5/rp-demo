@@ -1,8 +1,8 @@
-import { USERS } from "../../contants/endpoints";
+import { USERS, PHOTOS } from "../../contants/endpoints";
 import UserList from "../../components/UserList";
 import Header from "../../components/Header";
 import Link from "next/link";
-
+import PhotoList from "../../components/PhotoList";
 function Index({ data }) {
   return (
     <section>
@@ -12,7 +12,7 @@ function Index({ data }) {
         {data.map((user, idx) => (
           <Link href={`/data-fetching/${user.id}`} key={`user_${idx}`}>
             <a>
-              <UserList user={user} showAlbum={false} />
+              <PhotoList user={user} showAlbum={false} />
             </a>
           </Link>
         ))}
@@ -22,8 +22,8 @@ function Index({ data }) {
 }
 
 // Next will fetch this data at BUILD time
-export async function getStaticProps() {
-  const res = await fetch(USERS);
+export async function getServerSideProps() {
+  const res = await fetch(PHOTOS);
   const data = await res.json();
   return {
     props: {

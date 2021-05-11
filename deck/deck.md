@@ -8,13 +8,15 @@ backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 
 # Next.js
 
-Joe Kanakaraj
+Joe Kanakaraj, *Lead Frontend Developer*
 
 ---
 
 ## What is Next.js
 
-Next.js is an open-source React front-end development web framework created by Vercel. 
+- Open-source React front-end development web framework
+- Known for it's ability to pre-render (SSG and SSR)
+- Also offers OOTB code splitting and bundling, CSS support, routing, and much more!
 
 ---
 
@@ -25,18 +27,6 @@ Next.js is an open-source React front-end development web framework created by V
     - Current CEO of Vercel
 
 ---
-## About Next.js
-### 6 Principals
-* OOTB functionality w/ no setup
-* JavaScript everywhere
-* All functions written in JS
-* Automatic code-splitting and server rendering
-* Configurable data-fetching
-* Anticipating requests
-* Simplifying deployment
-
----
-
 # Getting Started
 
 - `create-next-app` (https://nextjs.org/docs/api-reference/create-next-app)
