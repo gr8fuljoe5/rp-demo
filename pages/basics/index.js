@@ -3,7 +3,7 @@ import CssSupport from "../../components/CssSupport";
 import Link from "next/link";
 import styles from "../../styles/Basics.module.css";
 import Image from "next/image";
-import { Grid, Paper, Typography, Container } from "@material-ui/core";
+import { Container, Grid, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -30,6 +30,7 @@ function Basics() {
           https://nextjs.org/docs/routing/dynamic-routes
           https://nextjs.org/docs/api-routes/introduction
         */}
+
         <Grid item xs={12}>
           <Paper elevation={2} className={classes.paper}>
             <Typography variant={"h4"}>
@@ -42,6 +43,9 @@ function Basics() {
               </Link>
               <Link href={"/basics/page-two"}>
                 <a>Page Two</a>
+              </Link>
+              <Link href={"/basics/page-three"}>
+                <a>Page Three</a>
               </Link>
             </section>
             <section className={styles.basicsContainer}>

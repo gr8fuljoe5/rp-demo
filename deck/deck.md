@@ -39,6 +39,10 @@ Joe Kanakaraj, *Lead Frontend Developer*
 }
 ```
 ---
+# Getting Started (cont...)
+![opacity: 1](getting_started_nextjs.png)
+
+---
 
 # The Basics
 
@@ -91,4 +95,10 @@ With it, you can import JavaScript modules dynamically and work with them.
 
 ___
 # Deployment
-
+- Vercel platform
+  - Optimized for Next.js
+  - DPS (Deploy, Preview, Ship)
+- Other Options
+  - Docker
+  - Static HTML Export
+    - `next export`
