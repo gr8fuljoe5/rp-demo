@@ -3,16 +3,17 @@ import CssSupport from "../../components/CssSupport";
 import Link from "next/link";
 import styles from "../../styles/Basics.module.css";
 import Image from "next/image";
-import { Typography, Paper, Card, Grid } from "@material-ui/core";
+import { Grid, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: theme.spacing(2),
+    width: "75%",
+    margin: "0 auto",
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: "center",
     color: theme.palette.text.secondary,
   },
 }));
@@ -22,14 +23,13 @@ function Basics() {
   return (
     <div className={classes.root}>
       <Header title={"The Basics"} />
-
       <Grid container spacing={5}>
         <Grid item xs={12}>
-          <Typography variant={"h1"}>Basics</Typography>
+          <Typography variant={"h1"}>The Basics</Typography>
         </Grid>
         <Grid item xs={12}>
           <Paper elevation={2} className={classes.paper}>
-            <Typography variant={"h2"}>Pages and Basic Routing</Typography>
+            <Typography variant={"h3"}>Pages and Basic Routing</Typography>
             <section className={styles.basicsContainer}>
               <Link href={"/basics/page-one"}>
                 <a>Page One</a>
