@@ -42,7 +42,7 @@ Joe Kanakaraj, *Lead Frontend Developer*
 
 # The Basics
 
-- Pages and Routing
+- Routing (Basic, Dynamic, API)
 - Built in CSS Support
 - Image Optimization
 
@@ -50,9 +50,20 @@ Joe Kanakaraj, *Lead Frontend Developer*
 ---
 # Data Fetching
 - Client-Side Rendering (CSR)
-- Static Site Generation (SSG)
 - Server-side Rendering (SSR)
+- Static Site Generation (SSG)
 - Incremental Static Regeneration (ICR)
+
+___
+# Server Side Rendering (SSR)
+- Each HTML page is generated per request
+- Next allows the first page load to be rendered by the server 
+  - Great for SEO and performance
+  - No need to rebuild when content changes
+  
+``` 
+getServerSideProps() - Next will pre-render the page on each request
+```
 
 ---
 # Static Site Generation (SSG)
@@ -65,18 +76,6 @@ Joe Kanakaraj, *Lead Frontend Developer*
 getStaticProps() - use when your page content depends on extendal data
 getStaticPaths() - used when your paths depend on external data (usually used in addition to getStaticProps) 
 ```
-
-___
-# Server Side Rendering (SSR)
-- Each HTML page is generated per request
-- Next allows the first page load to be rendered by the server 
-  - Great for SEO and performance
-  - Great if your 
-  
-``` 
-getServerSideProps() - Next will pre-render the page on each request
-```
-
 ___
 # Incremental Static Regeneration (ICR)
 With `getStaticProps` you don't have to stop relying on dynamic content, as static content can also be dynamic. Incremental Static Regeneration allows you to update existing pages by re-rendering them in the background as traffic comes in.

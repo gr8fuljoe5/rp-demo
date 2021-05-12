@@ -39,13 +39,8 @@ function Header(props) {
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link href={"/data-fetching/blog"}>
-                <a>Data Fetching Blog Demo</a>
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link href={"/icr"}>
-                <a>ICR</a>
+              <Link href={"/data-fetching"}>
+                <a>Data Fetching </a>
               </Link>
             </MenuItem>
             <MenuItem>

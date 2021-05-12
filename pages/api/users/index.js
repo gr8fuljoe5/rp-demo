@@ -1,6 +1,8 @@
-import data from "../../../json/users_static.json";
+import { USERS } from "../../../contants/endpoints";
 
-export default (req, res) => {
+export default async function (req, res) {
+  const response = await fetch(USERS);
+  const json = await response.json();
   res.statusCode = 200;
-  res.json(data);
-};
+  res.json(json);
+}

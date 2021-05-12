@@ -1,6 +1,6 @@
 // https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration
 
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 
 function Index({ random }) {
   const { entries } = random;
