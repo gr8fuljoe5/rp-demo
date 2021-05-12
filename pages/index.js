@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>RP Next.js Demo HELLO WORLD</title>
+        <title>RP Next.js Demo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
