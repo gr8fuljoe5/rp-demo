@@ -3,14 +3,12 @@ import CssSupport from "../../components/CssSupport";
 import Link from "next/link";
 import styles from "../../styles/Basics.module.css";
 import Image from "next/image";
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Grid, Paper, Typography, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    width: "75%",
-    margin: "0 auto",
   },
   paper: {
     padding: theme.spacing(2),
@@ -21,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 function Basics() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <Container className={classes.root} maxWidth>
       <Header title={"The Basics"} />
       <Grid container spacing={5}>
         <Grid item xs={12}>
@@ -102,7 +100,7 @@ function Basics() {
           </Paper>
         </Grid>
       </Grid>
-    </div>
+    </Container>
   );
 }
 
