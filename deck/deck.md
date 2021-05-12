@@ -82,7 +82,12 @@ With `getStaticProps` you don't have to stop relying on dynamic content, as stat
 
 ___
 # Dynamic Imports
-Next.js supports ES2020 `dynamic import()` for JavaScript. With it, you can import JavaScript modules dynamically and work with them. They also work with SSR.
+Next.js supports ES2020 `dynamic import()` for JavaScript. 
+With it, you can import JavaScript modules dynamically and work with them. 
+
+- Control how to split and bundle components
+- Dynamically import 3rd party libs as needed 
+- Works with SSR!
 
 ___
 # Deployment

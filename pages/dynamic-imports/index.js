@@ -1,61 +1,93 @@
 import { useState } from "react";
+import { Container, Card, Grid, Typography } from "@material-ui/core";
 import Header from "../../components/Header";
 import dynamic from "next/dynamic";
 
-// import DynamicComponent1 from "../../components/Dynamic/hello1";
-// import DynamicComponent2WithCustomLoading from "../../components/Dynamic/hello2";
-// import DynamicComponent3WithNoSSR from "../../components/Dynamic/hello3";
-// import DynamicComponent4 from "../../components/Dynamic/hello4";
-// import DynamicComponent5 from "../../components/Dynamic/hello5";
+// import Plot from "react-plotly.js";
 
 const DynamicComponent1 = dynamic(() =>
   import("../../components/Dynamic/hello1")
 );
 
-const DynamicComponent2WithCustomLoading = dynamic(
-  () => import("../../components/Dynamic/hello2"),
-  { loading: () => <p>Loading caused by client page transition ...</p> }
+const DynamicComponent2 = dynamic(() =>
+  import("../../components/Dynamic/hello2")
 );
 
-const DynamicComponent3WithNoSSR = dynamic(
-  () => import("../../components/Dynamic/hello3"),
-  { loading: () => <p>Loading ...</p>, ssr: false }
-);
+const FuseComponent = dynamic(() => {
+  return import("../../components/Dynamic/fuse");
+});
 
-const DynamicComponent4 = dynamic(() =>
-  import("../../components/Dynamic/hello4")
-);
-
-const DynamicComponent5 = dynamic(() =>
-  import("../../components/Dynamic/hello5")
-);
+// const Plot = dynamic(
+//   () => {
+//     return import("react-plotly.js");
+//   },
+//   { loading: () => <p>Loading Plotly library...</p>, ssr: false }
+// );
 
 const IndexPage = () => {
   const [showMore, setShowMore] = useState(false);
   const [falsyField] = useState(false);
 
   return (
-    <div>
+    <Container maxWidth>
       <Header title={"Dynamic Imports"} />
-
-      {/* Load immediately, but in a separate bundle */}
-      <DynamicComponent1 />
-
-      {/* Show a progress indicator while loading */}
-      <DynamicComponent2WithCustomLoading />
-
-      {/* Load only on the client side */}
-      <DynamicComponent3WithNoSSR />
-
-      {/* This component will never be loaded */}
-      {falsyField && <DynamicComponent4 />}
-
-      {/* Load on demand */}
-      {showMore && <DynamicComponent5 />}
-      <button onClick={() => setShowMore(!showMore)}>Toggle Show More</button>
-
-      {/* Load library on demand */}
-    </div>
+      <Grid container spacing={2}>
+        <Grid>
+          <Typography variant={"h2"}>Dynamic Imports</Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant={"body1"}>
+            Load immediately, but in a separate bundle
+          </Typography>
+          {/* Load immediately, but in a separate bundle */}
+          <Card>
+            <DynamicComponent1 />
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant={"body1"}>
+            This component will never be loaded
+          </Typography>
+          {/* This component will never be loaded */}
+          <Card>{falsyField && <DynamicComponent1 />}</Card>
+        </Grid>
+        <Grid item xs={12}>
+          {/* Load on demand */}
+          <Card>
+            <Typography variant={"body1"}>Loaded on demand</Typography>
+            {showMore && <DynamicComponent2 />}
+            <button onClick={() => setShowMore(!showMore)}>
+              Show Component
+            </button>
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          {/* Load library on demand */}
+          <Typography variant={"body1"}>
+            Load 3rd party library on demand{" "}
+          </Typography>
+          <Card>
+            <FuseComponent />
+          </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <Typography variant={"body1"}>Loads with no SSR</Typography>
+          {/*  <Plot*/}
+          {/*    data={[*/}
+          {/*      {*/}
+          {/*        x: [1, 2, 3],*/}
+          {/*        y: [2, 6, 3],*/}
+          {/*        type: "scatter",*/}
+          {/*        mode: "lines+markers",*/}
+          {/*        marker: { color: "red" },*/}
+          {/*      },*/}
+          {/*      { type: "bar", x: [1, 2, 3], y: [2, 5, 3] },*/}
+          {/*    ]}*/}
+          {/*    layout={{ width: 320, height: 240, title: "A Fancy Plot" }}*/}
+          {/*  />*/}
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 
