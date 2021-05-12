@@ -3,7 +3,7 @@ import sass from "./Support2.module.scss";
 
 import { Card, Grid } from "@material-ui/core";
 
-function Index(props) {
+function Index() {
   return (
     <>
       {/*<Grid className={styles.main} container spacing={2}>*/}
