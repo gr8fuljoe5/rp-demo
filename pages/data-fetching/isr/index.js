@@ -1,14 +1,15 @@
 // https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration
 
 import Header from "../../../components/Header";
+import { Container } from "@material-ui/core";
 
 function Index({ random }) {
   const { entries } = random;
 
-  console.log("data entries => ", entries);
+  // console.log("data entries => ", entries);
 
   return (
-    <div>
+    <Container>
       <Header title={"ICR"} />
       <h1>Incremental Static Regeneration</h1>
       <ul>
@@ -30,7 +31,7 @@ function Index({ random }) {
           );
         })}
       </ul>
-    </div>
+    </Container>
   );
 }
 

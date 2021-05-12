@@ -12,8 +12,8 @@ export default function DataFetching() {
         </Link>
       </p>
       <p>
-        <Link href={"/data-fetching/icr"}>
-          <a>ICR</a>
+        <Link href={"/data-fetching/isr"}>
+          <a>ISR</a>
         </Link>
       </p>
     </section>

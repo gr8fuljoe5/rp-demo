@@ -25,7 +25,7 @@ export default function Home() {
           <Link href={"/data-fetching"}>
             <a className={styles.card}>
               <h3>Data-Fetching &rarr;</h3>
-              <p>See some SSG, SSR and ICR examples in action</p>
+              <p>See some SSG, SSR and ISR examples in action</p>
             </a>
           </Link>
 
