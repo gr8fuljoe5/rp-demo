@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 function Basics() {
   const classes = useStyles();
   return (
-    <Container className={classes.root} maxWidth>
+    <Container className={classes.root} maxWidth={true}>
       <Header title={"The Basics"} />
       <Grid container spacing={5}>
         <Grid item xs={12}>

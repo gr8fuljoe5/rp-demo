@@ -1,11 +1,12 @@
 import Header from "../../components/Header";
 import Link from "next/link";
+import { Container, Typography } from "@material-ui/core";
 
 export default function DataFetching() {
   return (
-    <section>
+    <Container maxWidth={true}>
       <Header title={"Data Fetching"} />
-      <h1>Data Fetching</h1>
+      <Typography variant={"h1"}>Data Fetching</Typography>
       <p>
         <Link href={"/data-fetching/blog"}>
           <a>Blog</a>
@@ -16,6 +17,6 @@ export default function DataFetching() {
           <a>ISR</a>
         </Link>
       </p>
-    </section>
+    </Container>
   );
 }

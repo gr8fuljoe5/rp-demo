@@ -19,7 +19,7 @@ function Blog(props) {
                     <Typography variant={"h5"}>{post.title}</Typography>
                   </a>
                 </Link>
-                <Typography variant={"p"}>{post.body}</Typography>
+                <Typography variant={"body1"}>{post.body}</Typography>
               </Card>
             </Grid>
           );
