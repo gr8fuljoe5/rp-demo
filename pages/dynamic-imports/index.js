@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container } from "@material-ui/core";
 import Header from "../../components/Header";
+import Fuse from "../../components/Dynamic/fuse";
 import dynamic from "next/dynamic";
 
 // import Plot from "react-plotly.js";
@@ -55,6 +56,7 @@ const IndexPage = () => {
       {/*</section>*/}
 
       {/* Load library on demand */}
+      <Fuse />
     </Container>
   );
 };
