@@ -3,7 +3,7 @@ import { Container, Card, Grid, Typography } from "@material-ui/core";
 import Header from "../../components/Header";
 import dynamic from "next/dynamic";
 
-import Plot from "react-plotly.js";
+// import Plot from "react-plotly.js";
 
 const DynamicComponent1 = dynamic(() =>
   import("../../components/Dynamic/hello1")
