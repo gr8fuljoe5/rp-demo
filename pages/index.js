@@ -29,7 +29,7 @@ export default function Home() {
             </a>
           </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href={"/dynamic-imports"} className={styles.card}>
             <h3>Dynamic Imports &rarr;</h3>
             <p>Learn about the power of dynamic imports</p>
           </a>
