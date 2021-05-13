@@ -44,7 +44,7 @@ function Header(props) {
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link href={"/dynamic-imports"}>
+              <Link href={"/dynamic-import"}>
                 <a> Dynamic Imports</a>
               </Link>
             </MenuItem>

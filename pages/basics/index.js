@@ -89,18 +89,16 @@ function Basics() {
         <Grid item xs={12}>
           <Paper elevation={2} className={classes.paper}>
             <Typography variant={"h2"}>Image Optimization</Typography>
-            <Paper elevation={2}>
-              <section>
-                <div>
-                  <Image
-                    src={"/high-res.jpg"}
-                    width={1200}
-                    height={500}
-                    alt={"hello world"}
-                  />
-                </div>
-              </section>
-            </Paper>
+            <section>
+              <div>
+                <img
+                  src={"/high-res.jpg"}
+                  width={1200}
+                  height={500}
+                  alt={"hello world"}
+                />
+              </div>
+            </section>
           </Paper>
         </Grid>
       </Grid>

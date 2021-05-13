@@ -29,19 +29,18 @@ export default function Home() {
             </a>
           </Link>
 
-          <a href={"/dynamic-imports"} className={styles.card}>
+          <a href={"/dynamic-import"} className={styles.card}>
             <h3>Dynamic Imports &rarr;</h3>
             <p>Learn about the power of dynamic imports</p>
           </a>
 
           <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://www.youtube.com/watch?v=mTz0GXj8NN0"
+            target={"_blank"}
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <h3>Crash Course &rarr;</h3>
+            <p>Great video tutorial with lots of good examples!</p>
           </a>
         </div>
 
