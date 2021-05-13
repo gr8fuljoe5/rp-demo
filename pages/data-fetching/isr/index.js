@@ -1,4 +1,5 @@
 // https://nextjs.org/docs/basic-features/data-fetching#incremental-static-regeneration
+// https://www.smashingmagazine.com/2021/04/incremental-static-regeneration-nextjs/
 
 import Header from "../../../components/Header";
 import { makeStyles } from "@material-ui/core/styles";
