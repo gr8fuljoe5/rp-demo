@@ -91,7 +91,7 @@ function Basics() {
             <Typography variant={"h2"}>Image Optimization</Typography>
             <section>
               <div>
-                <img
+                <Image
                   src={"/high-res.jpg"}
                   width={1200}
                   height={500}
