@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { POSTS } from "../../../contants/endpoints";
 import Header from "../../../components/Header";
-import { Typography, Container, Card, Grid } from "@material-ui/core";
-
+import { Typography, Container, Grid } from "@material-ui/core";
+import BlogPost from "../../../components/BlogPost";
 function Blog(props) {
   const { posts } = props;
   return (
@@ -13,14 +13,7 @@ function Blog(props) {
         {posts.map((post) => {
           return (
             <Grid item xs={12}>
-              <Card style={{ padding: 10 }}>
-                <Link href={`/data-fetching/blog/${post.id}`} key={post.id}>
-                  <a>
-                    <Typography variant={"h5"}>{post.title}</Typography>
-                  </a>
-                </Link>
-                <Typography variant={"body1"}>{post.body}</Typography>
-              </Card>
+              <BlogPost post={post} />
             </Grid>
           );
         })}

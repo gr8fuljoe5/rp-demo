@@ -10,8 +10,8 @@ function Page() {
     <Container maxWidth={true}>
       <Header title={`${firstname}: ${firstname}: Dynamic Routing`} />
       <Typography variant={"h2"}>Dynamic Routing</Typography>
-      <div>First Name: {firstname}</div>
-      <div>Last Name: {lastname}</div>
+      <Typography variant={"body1"}>First Name: {firstname}</Typography>
+      <Typography variant={"body2"}>Last Name: {lastname}</Typography>
     </Container>
   );
 }

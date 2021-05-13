@@ -1,20 +1,21 @@
 import Link from "next/link";
 import Header from "../../../components/Header";
+import BlogPost from "../../../components/BlogPost";
 import { POSTS } from "../../../contants/endpoints";
 import styles from "../../../styles/Blog.module.css";
+import { Container } from "@material-ui/core";
 
 function Post(props) {
-  const { title, body, id } = props.post;
+  const { title, id } = props.post;
   console.log(`Post: ${id}`);
   return (
-    <section className={styles.post}>
+    <Container className={styles.post} maxWidth={true}>
       <Header title={`Blog: ${title}`} />
-      <h1>{title}</h1>
-      <p>{body}</p>
+      <BlogPost post={props.post} />
       <Link href={"/data-fetching/blog"}>
         <a>Back</a>
       </Link>
-    </section>
+    </Container>
   );
 }
 
