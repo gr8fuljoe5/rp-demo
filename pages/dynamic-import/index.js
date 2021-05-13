@@ -3,7 +3,7 @@ import { Container, Card, Grid, Typography } from "@material-ui/core";
 import Header from "../../components/Header";
 import dynamic from "next/dynamic";
 
-// import Plot from "react-plotly.js";
+import Plot from "react-plotly.js";
 
 const DynamicComponent1 = dynamic(() =>
   import("../../components/Dynamic/hello1")
@@ -17,12 +17,12 @@ const FuseComponent = dynamic(() => {
   return import("../../components/Dynamic/fuse");
 });
 
-const Plot = dynamic(
-  () => {
-    return import("react-plotly.js");
-  },
-  { loading: () => <p>Loading Plotly library...</p>, ssr: false }
-);
+// const Plot = dynamic(
+//   () => {
+//     return import("react-plotly.js");
+//   },
+//   { loading: () => <p>Loading Plotly library...</p>, ssr: false }
+// );
 
 const IndexPage = () => {
   const [showMore, setShowMore] = useState(false);
@@ -72,19 +72,19 @@ const IndexPage = () => {
         </Grid>
         <Grid item xs={12}>
           <Typography variant={"body1"}>Loads with no SSR</Typography>
-          <Plot
-            data={[
-              {
-                x: [1, 2, 3],
-                y: [2, 6, 3],
-                type: "scatter",
-                mode: "lines+markers",
-                marker: { color: "red" },
-              },
-              { type: "bar", x: [1, 2, 3], y: [2, 5, 3] },
-            ]}
-            layout={{ width: 320, height: 240, title: "A Fancy Plot" }}
-          />
+          {/*  <Plot*/}
+          {/*    data={[*/}
+          {/*      {*/}
+          {/*        x: [1, 2, 3],*/}
+          {/*        y: [2, 6, 3],*/}
+          {/*        type: "scatter",*/}
+          {/*        mode: "lines+markers",*/}
+          {/*        marker: { color: "red" },*/}
+          {/*      },*/}
+          {/*      { type: "bar", x: [1, 2, 3], y: [2, 5, 3] },*/}
+          {/*    ]}*/}
+          {/*    layout={{ width: 320, height: 240, title: "A Fancy Plot" }}*/}
+          {/*  />*/}
         </Grid>
       </Grid>
     </Container>
