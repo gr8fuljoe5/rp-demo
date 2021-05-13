@@ -38,7 +38,7 @@ function Basics() {
             </Typography>
             <section className={styles.basicsContainer}>
               <Typography variant={"h5"}>Basic</Typography>
-              <Link href={"/basics/page-one"}>
+              <Link href={"/basics/page-one"} prefetch={false}>
                 <a>Page One</a>
               </Link>
               <Link href={"/basics/page-two"}>
